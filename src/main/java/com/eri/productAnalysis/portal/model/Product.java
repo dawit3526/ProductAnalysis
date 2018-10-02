@@ -1,5 +1,5 @@
 package com.eri.productAnalysis.portal.model;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;

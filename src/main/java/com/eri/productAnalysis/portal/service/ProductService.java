@@ -10,7 +10,7 @@ public interface ProductService {
     void setProduts(List<Product> products);
 
 
-
+    List<Product> getProducts();
 
 
 }
