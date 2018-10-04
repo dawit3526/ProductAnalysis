@@ -1,22 +1,34 @@
 package com.eri.productAnalysis.portal.model;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.data.mongodb.core.index.Indexed;
+
+
+
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+
 
 @Document
 public class Product {
 
-    @Indexed
-    @Field("ProductId")
+    private ObjectId _id;
+
+    public Product() {
+        this._id = ObjectId.get();
+    }
+    @Id
     private int productId;
 
-    @Field("price")
     private int price;
 
-    @Field("description")
     private String description;
 
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
     public int getPrice() {
         return price;
     }
