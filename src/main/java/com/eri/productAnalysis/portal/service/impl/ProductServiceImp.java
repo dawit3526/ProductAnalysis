@@ -1,4 +1,5 @@
 package com.eri.productAnalysis.portal.service.impl;
+import com.eri.productAnalysis.portal.dal.dao.ProductDAL;
 import com.eri.productAnalysis.portal.dal.dao.ProductRepository;
 import com.eri.productAnalysis.portal.model.Product;
 import com.eri.productAnalysis.portal.service.ProductService;
@@ -14,23 +15,25 @@ import java.util.List;
 @Transactional
 public class ProductServiceImp implements ProductService {
 
+
     @Inject
-    ProductRepository productRepository;
+    ProductDAL productDAL;
 
     @Override
-    public void setProduts(List<Product> products) {
-        for(Product p : products)
-        productRepository.save(p);
+    public void setProduts(Product product) {
+
+        productDAL.addNewProduct(product);
 
     }
 
     @Override
     public List<Product> getProducts() {
-        List<Product> products = new ArrayList<>();
-        Product p1 = new Product();
-        p1.setPrice(12);
-        p1.setDescription("appple");
-        products.add(p1);
+        List<Product> products = productDAL.getAllProducts();
+       // List<Product> products = new ArrayList<>();
+       // Product p1 = new Product();
+        //p1.setPrice(12);
+       // p1.setDescription("appple");
+        //products.add(p1);
         return products;
     }
 
