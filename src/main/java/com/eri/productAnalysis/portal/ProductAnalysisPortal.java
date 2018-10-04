@@ -13,10 +13,12 @@ public class ProductAnalysisPortal extends SpringBootServletInitializer {
 		app.run(args);
 	}
 
+
 	@Override
 	protected SpringApplicationBuilder configure(final SpringApplicationBuilder builder) {
 		return builder.sources(ProductAnalysisPortal.class);
 	}
+
 
 
 }

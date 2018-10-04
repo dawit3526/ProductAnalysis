@@ -1,11 +1,10 @@
-package com.eri.productAnalysis.portal.cotroller;
+package com.eri.productAnalysis.portal.controller;
 import com.eri.productAnalysis.portal.model.Product;
 
 import com.eri.productAnalysis.portal.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.inject.Inject;
 import javax.inject.Named;
