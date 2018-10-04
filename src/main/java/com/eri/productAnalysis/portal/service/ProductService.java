@@ -7,7 +7,7 @@ import java.util.List;
 public interface ProductService {
 
 
-    void setProduts(List<Product> products);
+    void setProduts(Product products);
 
 
     List<Product> getProducts();
