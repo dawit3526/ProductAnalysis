@@ -2,7 +2,7 @@ package com.eri.productAnalysis.portal.model;
 
 
 
-import org.bson.types.ObjectId;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,18 +10,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Product {
 
-    private ObjectId _id;
-
-    public Product() {
-        this._id = ObjectId.get();
-    }
     @Id
     private int productId;
-
     private int price;
-
     private String description;
-
     private ProductImage productImage;
 
     public void setProductId(int productId) {
