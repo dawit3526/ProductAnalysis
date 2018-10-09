@@ -1,0 +1,11 @@
+com/eri/productAnalysis/portal/ProductAnalysisPortal.class
+com/eri/productAnalysis/portal/JerseyConfig.class
+com/eri/productAnalysis/portal/model/Product.class
+com/eri/productAnalysis/portal/service/ProductService.class
+com/eri/productAnalysis/portal/dal/dao/ProductRepository.class
+com/eri/productAnalysis/portal/model/ProductImage.class
+com/eri/productAnalysis/portal/dal/dao/ProducRepositroryImp.class
+com/eri/productAnalysis/portal/resource/ProductRequest.class
+com/eri/productAnalysis/portal/controller/ProductController.class
+com/eri/productAnalysis/portal/service/impl/ProductServiceImp.class
+com/eri/productAnalysis/portal/dal/dao/ProductDAL.class

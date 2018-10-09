@@ -1,0 +1,12 @@
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/model/ProductImage.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/dal/dao/ProductRepository.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/ProductAnalysisPortal.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/model/Product.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/service/ProductService.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/service/impl/ProductServiceImp.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/package-info.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/JerseyConfig.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/dal/dao/ProducRepositroryImp.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/resource/ProductRequest.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/dal/dao/ProductDAL.java
+/Users/sysadmin/Desktop/ProductAnalyser/ProductAnalyser-portal/src/main/java/com/eri/productAnalysis/portal/controller/ProductController.java
