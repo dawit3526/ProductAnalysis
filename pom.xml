@@ -63,7 +63,7 @@
 		</plugins>
 	</build>
     <modules>
-        <module>productAnalysiscrawler</module>
+        <module>ProductAnalyser-crawler</module>
 		<module>ProductAnalyser-portal</module>
 
 	</modules>

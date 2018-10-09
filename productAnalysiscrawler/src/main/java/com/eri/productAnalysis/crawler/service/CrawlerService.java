@@ -1,4 +1,4 @@
-package com.eri.productAnalysis.crawler.service;
+package eri.productAnalysis.crawler.service;
 
 public interface CrawlerService {
 
