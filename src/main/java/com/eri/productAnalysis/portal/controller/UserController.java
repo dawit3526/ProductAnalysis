@@ -2,16 +2,24 @@ package com.eri.productAnalysis.portal.controller;
 
 import com.eri.productAnalysis.portal.dal.dao.UserRepository;
 import com.eri.productAnalysis.portal.model.User;
+import com.eri.productAnalysis.portal.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.inject.Inject;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Controller
-@RequestMapping(value="/")
+@Path("/user")
 public class UserController {
+
+    @Inject
+    UserService userService;
 
     private final Logger LOG= LoggerFactory.getLogger(getClass());
 
@@ -21,30 +29,35 @@ public class UserController {
         this.userRepository= userRepository;
     }
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public @ResponseBody
-    List<User> getAllUsers(){
-
+    @GET
+    @Path("")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllUsers(){
+        List<User> users = userService.getUsers();
         LOG.info ("Getting all users.");
         System.out.println("Output");
-        return userRepository.findAll();
+        return Response.ok(users).build();
     }
 
 
-    @RequestMapping (value = "/{userId}", method = RequestMethod.GET)
-    public User getUser(@PathVariable String userId){
 
+    @GET
+    @Path("/{userId}")
+    @Produces(MediaType.APPLICATION_JSON)
+      public Response getUser(@PathParam("userId") String userId){
         LOG.info("Getting user with ID: {}.", userId);
-
-       // return userRepository.findOne(userId);
-        return null;
+        User user = userService.getUserById(userId);
+        return Response.ok(user).build();
     }
 
-
-    @RequestMapping(value="/create", method = RequestMethod.POST)
-    public @ResponseBody User addNewUsers (@RequestBody User user){
+    @POST
+    @Path("/create")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addNewUsers (@RequestBody User user){
         LOG.info("Saving user.");
-        return userRepository.save(user);
+        userService.addNewUser(user);
+        return Response.ok(user).build();
     }
 
 

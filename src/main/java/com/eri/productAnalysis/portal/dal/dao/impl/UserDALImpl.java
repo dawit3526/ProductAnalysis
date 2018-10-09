@@ -4,6 +4,8 @@ import com.eri.productAnalysis.portal.dal.dao.UserDAL;
 import com.eri.productAnalysis.portal.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -18,17 +20,22 @@ public class UserDALImpl implements UserDAL {
 
     @Override
     public List<User> getAllUsers() {
+
         return mongoTemplate.findAll(User.class);
     }
 
     @Override
-    public User getUserById(String userId) {
-        return null;
+    public User addNewUser(User user) {
+        mongoTemplate.save(user);
+
+        return getUserById(user.getUserId());
     }
 
     @Override
-    public User addNewUser(User user) {
-        return null;
+    public User getUserById(String userId) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("userId").is(userId));
+        return mongoTemplate.findOne(query,User.class);
     }
 
     @Override
@@ -45,4 +52,6 @@ public class UserDALImpl implements UserDAL {
     public String addUserSetting(String userId, String key, String value) {
         return null;
     }
+
+
 }
