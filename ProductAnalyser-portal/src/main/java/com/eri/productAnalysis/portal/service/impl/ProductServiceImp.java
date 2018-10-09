@@ -29,6 +29,11 @@ public class ProductServiceImp implements ProductService {
     @Override
     public List<Product> getProducts() {
         List<Product> products = productDAL.getAllProducts();
+       // List<Product> products = new ArrayList<>();
+       // Product p1 = new Product();
+        //p1.setPrice(12);
+       // p1.setDescription("appple");
+        //products.add(p1);
         return products;
     }
 
