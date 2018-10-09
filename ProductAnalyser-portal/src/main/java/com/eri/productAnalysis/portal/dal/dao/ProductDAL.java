@@ -7,7 +7,7 @@ public interface ProductDAL {
 
     List<Product> getAllProducts();
 
-    Product getProductById(String productId);
+    List<Product> getProductById(int productId);
 
     Product addNewProduct(Product product);
 

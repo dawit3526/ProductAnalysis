@@ -22,6 +22,8 @@ public class Product {
 
     private String description;
 
+    private ProductImage productImage;
+
     public void setProductId(int productId) {
         this.productId = productId;
     }
@@ -43,5 +45,13 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ProductImage getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(ProductImage productImage) {
+        this.productImage = productImage;
     }
 }

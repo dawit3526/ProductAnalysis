@@ -20,10 +20,10 @@ public class ProducRepositroryImp implements ProductDAL{
     }
 
     @Override
-    public Product getProductById(String productId) {
+    public List<Product> getProductById(int productId) {
         Query query = new Query();
         query.addCriteria(Criteria.where("productId").is(productId));
-        return mongoTemplate.findOne(query, Product.class);
+        return mongoTemplate.find(query, Product.class);
     }
 
     @Override

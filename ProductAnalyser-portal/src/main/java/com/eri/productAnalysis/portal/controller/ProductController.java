@@ -13,6 +13,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
@@ -37,19 +38,31 @@ public class ProductController{
   public Response setProducts(@RequestBody Product products){
   logger.info("Inserting product "+ products.getProductId());
     productService.setProduts(products);
-
     return  Response.ok().build();
 
   }
 
   @GET
-  @Path("/get")
+  @Path("/getAllProducts")
   @Produces(MediaType.APPLICATION_JSON)
   public Response getProducts(){
+    Response response = null;
     List<Product> products = productService.getProducts();
     logger.info("get product called "+products);
-    return Response.ok(products).build();
+    response = Response.status(Response.Status.OK).entity(products).build();
+    return response;
 
+  }
+
+  @GET
+  @Path("/getProductById")
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response getProductById(@QueryParam(value = "productId") int productId){
+    Response response = null;
+    List<Product> products = productService.getProductById(productId);
+    logger.info("Products for the ID "+productId+" "+products);
+    response = Response.status(Response.Status.OK).entity(products).build();
+    return response;
   }
 
 }

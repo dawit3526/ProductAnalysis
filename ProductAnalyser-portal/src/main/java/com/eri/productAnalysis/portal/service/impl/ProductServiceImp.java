@@ -37,5 +37,8 @@ public class ProductServiceImp implements ProductService {
         return products;
     }
 
-
+    @Override
+    public List<Product> getProductById(int productId) {
+        return productDAL.getProductById(productId);
+    }
 }
