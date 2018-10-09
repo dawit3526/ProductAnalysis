@@ -1,4 +1,4 @@
-package com.eri.productAnalysis.crawler.service;
+package eri.productAnalysis.crawler.service;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

@@ -11,16 +11,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Product {
 
     @Id
-    private int productId;
+    private String productId;
     private int price;
     private String description;
     private ProductImage productImage;
 
-    public void setProductId(int productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
     public int getPrice() {

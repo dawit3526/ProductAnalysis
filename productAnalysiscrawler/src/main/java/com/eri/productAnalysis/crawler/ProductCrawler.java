@@ -1,4 +1,4 @@
-package com.eri.productAnalysis.crawler;
+package eri.productAnalysis.crawler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

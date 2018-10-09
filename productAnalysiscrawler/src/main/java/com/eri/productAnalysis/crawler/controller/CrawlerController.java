@@ -1,5 +1,5 @@
-package com.eri.productAnalysis.crawler.controller;
-import com.eri.productAnalysis.crawler.service.CrawlerService;
+package eri.productAnalysis.crawler.controller;
+import eri.productAnalysis.crawler.service.CrawlerService;
 import org.springframework.stereotype.Controller;
 
 import javax.inject.Inject;
@@ -26,9 +26,9 @@ public class CrawlerController {
 
 
     @GET
-    @Path("/crawelProdut")
+    @Path("/crawlProduct")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response crawelEngine(@QueryParam(value = "product") String product){
+    public Response crawlEngine(@QueryParam(value = "product") String product){
 
         String bodyText = crawlerService.searchProduct(product);
         return Response.ok(bodyText).build();
